@@ -157,7 +157,10 @@ def extract_manifolds(mat, max_dist):
     if not mat.flags['C_CONTIGUOUS']:
         mat = np.copy(mat)
 
-    dqm_lib.ExtractManifoldsC(mat, num_rows, num_cols, max_dist, man_idxs)
+    if dqm_lib is not None:
+        dqm_lib.ExtractManifoldsC(mat, num_rows, num_cols, max_dist, man_idxs)
+    else:
+        raise RuntimeError("compiled-library code not loaded by package")
 
     # extract manifolds from man_idxs (see ExtractManifoldsC for details)
     # notes
@@ -318,7 +321,10 @@ def nearest_neighbors(mat):
 
     nn_row_nums = np.zeros(num_rows, dtype=np.int32)
     nn_dists = np.zeros(num_rows, dtype=np.float64)
-    dqm_lib.NearestNeighborsC(mat, num_rows, num_cols, nn_row_nums, nn_dists)
+    if dqm_lib is not None:
+        dqm_lib.NearestNeighborsC(mat, num_rows, num_cols, nn_row_nums, nn_dists)
+    else:
+        raise RuntimeError("compiled-library code not loaded by package")
 
     return nn_row_nums, nn_dists
 # end function nearest_neighbors
