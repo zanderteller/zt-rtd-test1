@@ -1,0 +1,10 @@
+[build-system]
+#requires = ["flit_core >=3.2,<4"]
+#requires = ["setuptools"]
+#build-backend = "flit_core.buildapi"
+
+[project]
+name = "dqm"
+authors = [{name = "Zander Teller", email = "zander@zanderteller.net"}]
+description = "Dynamic Quantum Mapping"
+#dynamic = ["version", "description"]
