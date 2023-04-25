@@ -16,19 +16,19 @@ Creating recipes
 ----------------
 
 To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+you can use the ``dqm.DQM.run_simple()`` method:
 
-.. autofunction:: lumache.get_random_ingredients
+.. autofunction:: dqm.DQM.run_simple
 
 The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+or ``"veggies"``. Otherwise, :py:func:`dqm.DQM.run_simple`
 will raise an exception.
 
-.. autoexception:: lumache.InvalidKindError
+# .. autoexception:: lumache.InvalidKindError
 
 For example:
 
 >>> import dqm
->>> lumache.get_random_ingredients()
+>>> dqm.DQM.run_simple()
 ['shells', 'gorgonzola', 'parsley']
 

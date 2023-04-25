@@ -21,4 +21,7 @@ Contents
    usage
    api
 
+Other Section
+-------------
+
 More information here.
