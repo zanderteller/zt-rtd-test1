@@ -6,7 +6,7 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use DQM, **don't** install it using pip:
 
 .. code-block:: console
 
@@ -28,7 +28,7 @@ will raise an exception.
 
 For example:
 
->>> import lumache
+>>> import dqm
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
