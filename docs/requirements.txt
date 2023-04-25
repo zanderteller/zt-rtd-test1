@@ -1,1 +1,2 @@
 git+https://github.com/zanderteller/zt-rtd-test1.git
+numpy
